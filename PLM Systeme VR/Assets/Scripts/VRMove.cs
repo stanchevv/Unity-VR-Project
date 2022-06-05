@@ -6,12 +6,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class VRMove : MonoBehaviour
 {
-    public InputActionProperty positionProperty;
+    private Vector3 offset;
+    /*public InputActionProperty positionProperty;
     [SerializeField] XRRayInteractor rayController;
 
     public Vector3 Position { get; private set; } = Vector3.zero;
     public Vector3 rayHitPosition { get; private set; } = Vector3.zero;
-
 
     private void Awake()
     {
@@ -26,6 +26,16 @@ public class VRMove : MonoBehaviour
         }
 
         Position = positionProperty.action.ReadValue<Vector3>();
+    }*/
+
+
+    public void Selected(GameObject part)
+    {
+        GameObject controller = GameObject.Find("LeftHand Controller");
+        if (offset == null) {
+            offset = part.transform.position - controller.transform.position;
+        } 
+        part.transform.position = controller.transform.position + offset;
     }
 }
 

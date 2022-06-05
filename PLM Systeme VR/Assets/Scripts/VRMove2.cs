@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+
 
 public class VRMove2 : XRGrabInteractable
 {
@@ -16,7 +17,7 @@ public class VRMove2 : XRGrabInteractable
 
     protected override void Awake()
     {
-        snap = InputActionAsset.
+        snap = 
         base.Awake();
     }
 
@@ -25,7 +26,7 @@ public class VRMove2 : XRGrabInteractable
         base.OnSelectEntered(args);
         rController = args.interactor.GetComponent<XRController>();
 
-        mOffset = gameObject.transform.position - snap.rayHitPosition;
+        mOffset = gameObject.transform.position - snap.;
 
     }
 
@@ -56,4 +57,4 @@ public class VRMove2 : XRGrabInteractable
 
     }
 }
-}
+*/
